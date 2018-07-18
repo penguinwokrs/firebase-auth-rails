@@ -16,8 +16,11 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_development_dependency "rubocop", "~> 0.57"
+  # s.add_development_dependency "rubocop", "~> 0.57"
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "redis"
+  s.add_development_dependency "pry-rails"
+  s.add_development_dependency "minitest-stub_any_instance"
   s.add_dependency "rails", "~> 5.1.6"
   s.add_dependency "firebase_id_token", "~> 2.3.0"
 end

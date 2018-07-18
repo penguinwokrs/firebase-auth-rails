@@ -1,5 +1,12 @@
-# Firebase::Auth::Rails
-Short description and motivation.
+# firebase-auth-rails
+
+
+This is a plugin that performs firebase authentication in rails.
+
+Made influenced by [firebase_id_token](https://github.com/fschuindt/firebase_id_token) and [knock](https://github.com/nsarno/knock)
+
+Thanks to the author.
+
 
 ## Usage
 How to use my plugin.
@@ -22,7 +29,7 @@ $ gem install firebase-auth-rails
 ```
 
 ## Contributing
-Contribution directions go here.
+
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

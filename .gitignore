@@ -3,3 +3,6 @@ log/*.log
 pkg/
 test/dummy/log/*.log
 test/dummy/tmp/
+test/dummy/db/development.sqlite3
+test/dummy/db/schema.rb
+test/dummy/db/test.sqlite3
