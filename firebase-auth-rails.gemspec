@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Firebase::Auth::Rails::VERSION
   s.authors     = ["penguinwokrs"]
   s.email       = ["dev.and.penguin@gmail.com"]
-  s.homepage    = "https://"
+  s.homepage    = "https://github.com/penguinwokrs/firebase-auth-rails"
   s.summary     = "Summary of Firebase::Auth::Rails."
   s.description = "Description of Firebase::Auth::Rails."
   s.license     = "MIT"

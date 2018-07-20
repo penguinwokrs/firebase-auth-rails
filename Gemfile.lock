@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    firebase-auth-rails (0.1.0)
+    firebase-auth-rails (0.0.2)
       firebase_id_token (~> 2.3.0)
       rails (~> 5.1.6)
 
