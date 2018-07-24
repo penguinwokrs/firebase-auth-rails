@@ -9,7 +9,7 @@ module Firebase
         @token = token
         @payload = FirebaseIdToken::Signature.verify(token)
         # user not found or decode error
-        raise StandardError, 'decode error' if @payload.nil?
+        # raise StandardError, 'decode error' if @payload.nil?
       end
 
       def entity_for(entity_class)

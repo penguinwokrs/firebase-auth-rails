@@ -6,10 +6,12 @@ require "rails/test_help"
 require "redis"
 require "pry"
 require "minitest/stub_any_instance"
+require "minitest/retry"
 
 # Filter out Minitest backtrace while allowing backtrace from other libraries
 # to be shown.
 Minitest.backtrace_filter = Minitest::BacktraceFilter.new
+Minitest::Retry.use!
 
 Rails::TestUnitReporter.executable = 'bin/test'
 

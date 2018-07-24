@@ -47,10 +47,10 @@ module Firebase
           memoization_var_name = "@_#{getter_name}"
           self.class.send(:define_method, getter_name) do
             unless instance_variable_defined?(memoization_var_name)
-              # FIXME: change model class
               # FIXME: error handling
               _token = Firebase::Auth::Token.new(token: token)
-              current = _token.entity_for(entity_class)
+              # faild decode => current is nil
+              current = _token.entity_for(entity_class) if token.present?
               instance_variable_set(memoization_var_name, current)
             end
             instance_variable_get(memoization_var_name)
