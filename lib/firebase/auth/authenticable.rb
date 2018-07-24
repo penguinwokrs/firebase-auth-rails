@@ -38,6 +38,7 @@ module Firebase
 
       def token_from_request_headers
         unless request.headers['Authorization'].nil?
+          # FIXME: bearer
           request.headers['Authorization'].split.last
         end
       end
@@ -49,7 +50,12 @@ module Firebase
             unless instance_variable_defined?(memoization_var_name)
               # FIXME: error handling
               firebase_auth_token = Firebase::Auth::Token.new(token: token)
-              current = firebase_auth_token.token.present? ? firebase_auth_token.entity_for(entity_class) : nil
+              current =
+              begin
+                firebase_auth_token.entity_for(entity_class)
+              rescue
+                nil
+              end
               instance_variable_set(memoization_var_name, current)
             end
             instance_variable_get(memoization_var_name)
