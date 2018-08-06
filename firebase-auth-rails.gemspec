@@ -23,6 +23,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "minitest-stub_any_instance"
   s.add_development_dependency "minitest-retry"
   s.add_dependency "rails", "~> 5.1.6"
-  s.add_dependency "firebase_id_token", ">= 2.1.0", "~> 2.3.0"
+  s.add_dependency "firebase_id_token", ">= 2.3.0", "~> 2.3"
   s.add_dependency "jwt", ">= 2.1.0", "~> 2.1"
 end
