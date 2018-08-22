@@ -23,8 +23,8 @@ module Firebase
 
       def set_public_key
         # FIXME: cache
-        return unless FirebaseIdToken::Certificates.blank? || 0 <= FirebaseIdToken::Certificates.ttl
-        FirebaseIdToken::Certificates.request
+        return unless FirebaseIdToken::Certificates.blank? || 60 <= FirebaseIdToken::Certificates.ttl
+        FirebaseIdToken::Certificates.request!
         nil
       end
 
