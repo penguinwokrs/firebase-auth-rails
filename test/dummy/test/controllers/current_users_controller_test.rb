@@ -22,6 +22,11 @@ class CurrentUsersControllerTest < ActionController::TestCase
     FirebaseIdToken::Certificates.stub_any_instance(:local_certs, @certificate) do
       get :show
       assert_response :success
+
+      # ttl test
+      FirebaseIdToken::Certificates.new.redis.expire("certificates", 0)
+      get :show
+      assert_response :success
     end
   end
 end
