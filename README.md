@@ -7,13 +7,22 @@ Made influenced by [firebase_id_token](https://github.com/fschuindt/firebase_id_
 
 Thanks to the author.
 
-
 ## Status
 Now it's a beta version.
 Only login feature is available.
 It does not have firebase user creation feature.
 
 ## Usage
+Add database migrate method.
+
+```ruby
+class AddUidToUsers < ActiveRecord::Migration[5.1]
+  def change
+    add_column :users, :uid, :string
+  end
+end
+```
+
 Add the following code to the controller to use.
 
 ```ruby
@@ -102,6 +111,17 @@ $ bundle
 Or install it yourself as:
 ```bash
 $ gem install firebase-auth-rails
+```
+
+## initializer
+```ruby
+# frozen_string_literal: true
+
+FirebaseIdToken.configure do |config|
+  config.redis = Redis.new
+  config.project_ids = ['firebase_project_id']
+end
+
 ```
 
 ## Testing
