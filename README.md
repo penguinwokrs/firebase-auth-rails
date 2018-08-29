@@ -104,8 +104,12 @@ Or install it yourself as:
 $ gem install firebase-auth-rails
 ```
 
+## Testing
+There is preparation for testing firebase certification.
+Please click here. [link](https://github.com/fschuindt/firebase_id_token#user-content-development)
+
 ## Contributing
-We welcome PR
+We welcome PR.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
