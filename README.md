@@ -131,5 +131,22 @@ Please click here. [link](https://github.com/fschuindt/firebase_id_token#user-co
 ## Contributing
 We welcome PR.
 
+
+## development
+### getting started
+
+* Test preparation
+
+```bash
+cd test/dummy/
+bin/rails migrate
+```
+
+* The test is a minitest
+```bash
+# Project root dir
+bin/test
+```
+
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

@@ -1,0 +1,36 @@
+language: ruby
+rvm:
+  - 2.5
+  - 2.6
+  - ruby-head
+
+services:
+  - redis-server
+
+gemfile:
+  - gemfiles/rails4_2.gemfile
+  - gemfiles/rails5_0.gemfile
+  - gemfiles/rails5_1.gemfile
+  - gemfiles/rails5_2.gemfile
+
+before_script:
+  - cd test/dummy
+  - bin/rake db:migrate
+  - cd ../../
+
+script:
+  bin/test
+
+branches:
+  only:
+    - master
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
+  exclude:
+    - rvm: 2.6
+      gemfile: gemfiles/rails4_2.gemfile
+    - rvm: 2.0.0before_install:
+  - gem uninstall -v '>= 2' -i $(rvm gemdir)@global -ax bundler || true
+  - gem install bundler -v '< 2'
