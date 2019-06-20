@@ -20,7 +20,7 @@ before_script:
   - cd ../../
 
 script:
-  bin/test
+  rake test
 
 branches:
   only:
@@ -29,6 +29,7 @@ branches:
 matrix:
   allow_failures:
     - rvm: ruby-head
+    - gemfile: gemfiles/rails6_0.gemfile
   exclude:
     - rvm: 2.6
       gemfile: gemfiles/rails4_2.gemfile
