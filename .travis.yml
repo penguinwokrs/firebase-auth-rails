@@ -10,6 +10,8 @@ gemfile:
   - gemfiles/rails5_1.gemfile
   - gemfiles/rails5_2.gemfile
 
+script: bin/test
+
 matrix:
   allow_failures:
     - rvm: ruby-head
