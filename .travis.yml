@@ -13,3 +13,5 @@ gemfile:
 matrix:
   allow_failures:
     - rvm: ruby-head
+before_install:
+  - gem install -v 1.17.2 bundler --no-rdoc --no-ri
