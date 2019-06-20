@@ -16,4 +16,5 @@ matrix:
   allow_failures:
     - rvm: ruby-head
 before_install:
-  - gem install -v 1.17.2 bundler --no-rdoc --no-ri
+  - gem install bundler --no-document	  - travis_retry gem update --system || travis_retry gem update --system 2.7.8
+  - travis_retry gem install bundler --no-document || travis_retry gem install bundler --no-document -v 1.17.3
