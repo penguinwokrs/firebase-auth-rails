@@ -1,3 +1,4 @@
+require 'rails/test_unit/reporter'
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 require File.expand_path("../../test/dummy/config/environment.rb", __FILE__)
