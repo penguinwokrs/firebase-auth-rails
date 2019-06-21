@@ -1,4 +1,4 @@
-class CreateUsers < ActiveRecord::Migration[4.2]
+class CreateUsers < ActiveRecord::CompatibleLegacyMigration.migration_class
   def change
     create_table :users do |t|
       t.string :uid
