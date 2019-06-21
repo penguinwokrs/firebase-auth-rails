@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # s.add_development_dependency "rubocop", "~> 0.57"
-  s.add_development_dependency "sqlite3", "~> 1.3.6"
+  s.add_development_dependency "sqlite3", "~> 1.4.1"
   s.add_development_dependency "redis"
   s.add_development_dependency "pry-rails"
   s.add_development_dependency "minitest-stub_any_instance"
