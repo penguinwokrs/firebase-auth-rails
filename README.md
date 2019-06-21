@@ -7,6 +7,9 @@ This is a plugin that performs firebase authentication in rails.
 [![Build Status](https://travis-ci.org/penguinwokrs/firebase-auth-rails.svg?branch=master)](https://travis-ci.org/penguinwokrs/firebase-auth-rails)
 [![Maintainability](https://api.codeclimate.com/v1/badges/42c3a31a589213a5b82b/maintainability)](https://codeclimate.com/github/penguinwokrs/aws-transcoder-rails/maintainability)
 
+Supported Rails version is 5.x, 6.0
+
+As of version 4.2, the test environment is not ready and I do not know if it will work.
 
 
 Made influenced by [firebase_id_token](https://github.com/fschuindt/firebase_id_token) and [knock](https://github.com/nsarno/knock)
