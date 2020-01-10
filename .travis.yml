@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - 2.5
   - 2.6
+  - 2.7
   - ruby-head
 
 services:
@@ -18,14 +19,18 @@ before_script:
   - cd test/dummy
   - bin/rake db:migrate
   - cd ../../
-
-script:
-  rake test
-
+script: rake test
 branches:
   only:
     - master
-
+deploy:
+  provider: rubygems
+  api_key:
+    secure: bfgKVPXPOo1QMt1ZIPJmQ7pNJ4AJTmNW+oA9kNn5RF6vLobI1B97jbYNvQBa3Onha2MVC0fwcluVftse1AqGRykNtOEKxwFbhpsAu78UEnc8tymKAA4QU9S8VA8Q9J9cjmVMZ7gzufXKlUJfw5aCWz8iZnGGJZHSeFUhA2ByTUg2QDG4ZwYAPLlQmTJ2woYUoTQSvDZi4wdXJUUCyid/BwrzI9PzP3w/9wXvmWPBN8a6w7XukETgff7Qbz6FZSLpEX/aT6NsoaGlGWsgMOjAru7uOuZ5thN7LCNw4Vl4MIzJMCJPdxDBxsFmIKpdtJo0ybLhyRxAwA7RL67AXBsqd5KjCjsojAt6q6DerIv17/B4Tl50TDct6aBWKUL6MksgTY6mi4iU/OyTGcutlIeK2WH/HamxvgNUUhz8oLRzcQ7435FY2tGOowvPYpw9Z7qbTOl2gNYn77gp1LpxocBaMF3fbF7qgxCkKw4iye+oJSwCSPF1TRhZzeJZWLzNke7mtH++ico+eZPYVbDMoCwunQFIQBpZhob30SkZsyLOasspldEbNCB4boODA4TTDxclQtpJ6jv7GtB1EQr2HdmNjUZpfJ6IuXuTXLlXX5BqpVHLBtF2awPZ1xCU77WXPkxJF0ayam8xT9KeQwoqcuRh2bnf+oRM63O8OKlb7BoDbVY=
+  gem: firebase-auth-rails
+  on:
+    tags: true
+    repo: penguinwokrs/firebase-auth-rails
 matrix:
   allow_failures:
     - rvm: ruby-head
