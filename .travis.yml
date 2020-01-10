@@ -1,3 +1,5 @@
+---
+
 language: ruby
 rvm:
   - 2.5
@@ -30,7 +32,7 @@ deploy:
   gem: firebase-auth-rails
   on:
     tags: true
-    repo: penguinwokrs/firebase-auth-rails
+
 matrix:
   allow_failures:
     - rvm: ruby-head
