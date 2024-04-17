@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pry-rails'
   s.add_development_dependency 'redis'
   # s.add_development_dependency 'rubocop', '~> 0.57'
-  s.add_development_dependency 'sqlite3', '~> 1.3', '>= 1.3.6'
+  s.add_development_dependency 'sqlite3', '>= 1.3.6', '~> 2.0'
 
   s.add_dependency 'firebase_id_token', '>= 2.3.0', '< 4.0'
   s.add_dependency 'jwt', '>= 2.1.0', '~> 2.1'
